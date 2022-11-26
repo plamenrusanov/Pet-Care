@@ -23,8 +23,6 @@ page('/dashboard', showDashboardView);
 page('/dashboard/:id', showDetailsView);
 page('/create', showCreateView);
 page('/edit/:id', showEditView);
-page('*', parseURL);
-page('126777f5-3277-42ad-b874-76d043b069cb', parseURL);
 
 page.start();
 
@@ -37,8 +35,3 @@ function decoreContext(ctx, next){
     ctx.main = document.getElementById('content');
     next();
 }
-
-function parseURL(ctx, next){
-    console.log('parse');
-}
-
